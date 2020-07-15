@@ -1,6 +1,7 @@
 module.exports = {
     entry: {
         'sample': './sample/script/sample.tsx',
+        'ReactSample': './sample/script/ReactSample',
         'FocusOutShellSample': './sample/script/FocusOutShellSample'
     },
     devtool: 'source-map',

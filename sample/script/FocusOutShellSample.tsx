@@ -26,6 +26,7 @@ import {
     UndoWithImagePlugin
 } from "roosterjs-react";
 import { EmojiDescriptionStrings, EmojiFamilyStrings, EmojiKeywordStrings } from "roosterjs-react-emoji-resources";
+import { NavBar } from "./components/NavBar";
 
 import { initializeIcons } from "../fabric/src";
 
@@ -223,6 +224,7 @@ function createEditor(name: string, loadEmojiStrings: boolean = false): JSX.Elem
 
 const view = (
     <div className="root-container">
+        <NavBar />
         <div className="editor-container">
             {createEditor("editor #1", true /* loadEmojiStrings */)}
             {createEditor("editor #2")}

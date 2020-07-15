@@ -1,0 +1,15 @@
+{
+    "name": "roosterjs-plugin-react",
+    "description": "Roosterjs plugin for mounting components in editor",
+    "dependencies": {},
+    "main": "./lib/index.ts",
+    "devDependencies": {
+        "@types/jasmine": "^3.4.4",
+        "karma": "^4.4.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-jasmine": "^2.0.1",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "karma-sourcemap-loader": "^0.3.7",
+        "karma-webpack": "^4.0.2"
+    }
+}

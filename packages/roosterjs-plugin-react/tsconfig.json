@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        // "strict": true,
+        "jsx": "react",
+        "downlevelIteration": true,
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "../../dist",
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": false,
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "noUnusedLocals": true,
+        "baseUrl": ".",
+        "paths": {
+            "roosterjs-editor-dom": ["../roosterjs-editor-dom"],
+            "roosterjs-editor-types": ["../roosterjs-editor-types"],
+            "roosterjs-editor-core": ["../roosterjs-editor-core"],
+            "roosterjs-editor-api": ["../roosterjs-editor-api"],
+            "react": ["./node_modules/react"],
+            "react-dom": ["./node_modules/react-dom"],
+            "roosterjs-editor-dom/*": ["../roosterjs-editor-dom/*"],
+            "roosterjs-editor-types/*": ["../roosterjs-editor-types/*"],
+            "roosterjs-editor-core/*": ["../roosterjs-editor-core/*"],
+            "roosterjs-editor-api/*": ["../roosterjs-editor-api/*"],
+            "react/*": ["./node_modules/react/*"],
+            "react-dom/*": ["./node_modules/react-dom"]
+        },
+        "lib": ["es6", "dom"]
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+}

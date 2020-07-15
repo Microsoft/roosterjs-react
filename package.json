@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@microsoft/load-themed-styles": "^1.7.59",
+    "@types/react-dom": "^16.9.2",
     "office-ui-fabric-react": "^7.53.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -35,10 +36,17 @@
     "roosterjs-plugin-image-resize": "^7.8.0"
   },
   "devDependencies": {
+    "@types/jasmine": "^3.4.4",
     "@types/node": "^12.11.1",
     "@types/react": "^16.9.9",
     "autoprefixer": "^7.1.1",
     "classnames": "2.2.5",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
     "node-sass": "4.11.0",
     "postcss-inline-rtl": "^0.9.8",
     "postcss-modules": "1.1.0",

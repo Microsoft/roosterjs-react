@@ -3,6 +3,7 @@
         "target": "es5",
         "module": "commonjs",
         "baseUrl": "../../",
+        "downlevelIteration": true,
         "jsx": "react",
         "lib": [
             "es5",
@@ -10,7 +11,13 @@
             "dom"
         ],
         "paths": {
-            "roosterjs-react/lib/*": [
+            "roosterjs-plugin-react/lib/*": [
+                "packages/roosterjs-plugin-react/lib/*"
+            ],
+            "roosterjs-plugin-react": [
+                "packages/roosterjs-plugin-react/lib/index"
+            ],
+             "roosterjs-react/lib/*": [
                 "packages/roosterjs-react/lib/*"
             ],
             "roosterjs-react": [

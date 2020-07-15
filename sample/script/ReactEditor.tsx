@@ -1,9 +1,10 @@
-import * as React from 'react';
-import { Editor, EditorOptions, EditorPlugin, UndoService } from 'roosterjs-editor-core';
-import { HtmlSanitizer } from 'roosterjs-html-sanitizer';
-import { ContentEdit, HyperLink, Paste } from 'roosterjs-editor-plugins';
-import { DefaultFormat } from 'roosterjs-editor-types';
-import { EditorViewState } from 'roosterjs-react';
+import * as React from "react";
+import { Editor, EditorOptions, EditorPlugin, UndoService } from "roosterjs-editor-core";
+import { HtmlSanitizer } from "roosterjs-html-sanitizer";
+import { ContentEdit, HyperLink, Paste } from "roosterjs-editor-plugins";
+import { DefaultFormat } from "roosterjs-editor-types";
+import { EditorViewState } from "roosterjs-react";
+import { REACT_COMPONENT_SHARABLE_STATE, REACT_COMPONENT_INSTANCE_ID, REACT_COMPONENT_DATA_KEY } from "roosterjs-plugin-react";
 
 export interface ReactEditorProps {
     viewState: EditorViewState;
@@ -24,7 +25,7 @@ export default class ReactEditor extends React.Component<ReactEditorProps, {}> {
 
     render() {
         let { className, isRtl } = this.props;
-        return <div dir={isRtl ? 'rtl' : 'ltr'} className={className} onBlur={this.onBlur} ref={this.onContentDivRef} />;
+        return <div dir={isRtl ? "rtl" : "ltr"} className={className} onBlur={this.onBlur} ref={this.onContentDivRef} />;
     }
 
     componentDidMount() {
@@ -55,7 +56,15 @@ export default class ReactEditor extends React.Component<ReactEditorProps, {}> {
 
     private getEditorOptions(): EditorOptions {
         let { plugins, viewState, undo, hyperlinkToolTipCallback, defaultFormat } = this.props;
-        let allPlugins: EditorPlugin[] = [new ContentEdit(), new HyperLink(hyperlinkToolTipCallback), new Paste(true /*useDirectPaste*/)];
+        let allPlugins: EditorPlugin[] = [
+            new ContentEdit(),
+            new HyperLink(hyperlinkToolTipCallback),
+            new Paste(true /*useDirectPaste*/, {
+                [REACT_COMPONENT_SHARABLE_STATE]: value => value,
+                [REACT_COMPONENT_INSTANCE_ID]: value => value,
+                [REACT_COMPONENT_DATA_KEY]: value => value
+            })
+        ];
 
         if (plugins) {
             allPlugins = allPlugins.concat(plugins);
