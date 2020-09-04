@@ -39,7 +39,7 @@
     "@types/react": "^16.9.9",
     "autoprefixer": "^7.1.1",
     "classnames": "2.2.5",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "postcss-inline-rtl": "^0.9.8",
     "postcss-modules": "1.1.0",
     "rimraf": "2.6.2",
